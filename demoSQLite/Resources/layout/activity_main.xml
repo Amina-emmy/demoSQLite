@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:padding="20px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linearLayout1" >
+    <EditText
+        android:hint="Enter name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/inp_name" />
+    <EditText
+        android:hint="How do you feel ?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/inp_feel" />
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:padding="20px"
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2" >
+        <Button
+            android:text="ADD"
+            android:backgroundTint="@color/green"
+            android:layout_marginEnd="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_add" />
+        <Button
+            android:text="Edit"
+            android:backgroundTint="@color/yellow"
+            android:layout_marginEnd="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_edit" />
+        <Button
+            android:text="Delete"
+            android:backgroundTint="@color/red"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_delete" />
+    </LinearLayout>
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView1" />
+
+</LinearLayout>
