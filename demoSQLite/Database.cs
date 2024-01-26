@@ -69,5 +69,45 @@ namespace demoSQLite
                 return null;
             }
         }
+        // Delete Data    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        public bool DeleteData(Infos infos)
+        {
+            try
+            {
+                // create the DB in that path with the name myDataBase
+                using (var con = new SQLiteConnection(System.IO.Path.Combine(path, "myDatabase.db")))
+                {
+                    // insert data
+                    con.Delete(infos);
+                    return true;
+                }
+
+            }
+            catch (SQLiteException ex)
+            {
+                Log.Info("this is an exception", ex.Message);
+                return false;
+            }
+        }
+        // Edit Data    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        public bool EditData(Infos infos)
+        {
+            try
+            {
+                // create the DB in that path with the name myDataBase
+                using (var con = new SQLiteConnection(System.IO.Path.Combine(path, "myDatabase.db")))
+                {
+                    // insert data
+                    con.Query<Infos>("UPDATE infos set Name=?,Feeling=? WHERE id=?",infos.Name,infos.Feeling,infos.id);
+                    return true;
+                }
+
+            }
+            catch (SQLiteException ex)
+            {
+                Log.Info("this is an exception", ex.Message);
+                return false;
+            }
+        }
     }
 }
