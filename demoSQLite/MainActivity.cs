@@ -14,9 +14,9 @@ namespace demoSQLite
         Database db;
         Infos infos;
 
-        ListView lsv1;
-        List<Infos> listInfos;
-        Adapter adapter;
+        ListView lsv1; // to assign our layout's listView to it
+        List<Infos> listInfos; // to stock the list loaded from the DB
+        Adapter adapter; // our lsv1 has adapter, we will assign this to it
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -27,10 +27,10 @@ namespace demoSQLite
 
             // Create the DataBase
             db = new Database();
-            db.CreateDatabase();
+            db.CreateDatabase(); // the function in Database.cs
 
             // LOAD Data
-            LoadData();
+            LoadData(); // the function in here
             lsv1 = FindViewById<ListView>(Resource.Id.listView1);
 
             // ADD Data
@@ -52,7 +52,7 @@ namespace demoSQLite
         private void LoadData()
         {
             // the method return a List<Infos> so we store it in the var we declared
-            listInfos = db.LoadtData();
+            listInfos = db.LoadtData(); // the function in Database.cs
             // create a new adapter in the MainActivity with the list we got
             adapter = new Adapter(this,listInfos);
             // set the adapter of our listView we got by Id

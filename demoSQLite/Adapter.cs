@@ -48,7 +48,7 @@ namespace demoSQLite
         {
             // the view we created
             var view = convertView ?? activity.LayoutInflater.Inflate(Resource.Layout.list_card, parent, false);
-            // get its elemnts 
+            // get its elemnts where the data will appear 
             var tvName = view.FindViewById<TextView>(Resource.Id.tv_name);
             var tvFeel = view.FindViewById<TextView>(Resource.Id.tv_feel);
             tvName.Text = infos[position].Name;
