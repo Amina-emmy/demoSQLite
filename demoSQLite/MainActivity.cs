@@ -42,10 +42,18 @@ namespace demoSQLite
 
             btnAdd.Click += (s, e) =>
             {
-                infos.Name=inp_name.Text;
-                infos.Feeling=inp_feeling.Text;
-                db.InsertData(infos);
-                LoadData();
+                if (string.IsNullOrWhiteSpace(inp_feeling.Text) || string.IsNullOrWhiteSpace(inp_name.Text))
+                {
+                    // to not enter empty data
+                }
+                else
+                {
+                    infos.Name=inp_name.Text;
+                    infos.Feeling = inp_feeling.Text;
+                    db.InsertData(infos);
+                    LoadData();
+                }
+                
                 // vider les champs after entering Data
                 inp_name.Text = "";
                 inp_feeling.Text = "";
