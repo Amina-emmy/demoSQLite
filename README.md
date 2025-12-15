@@ -25,4 +25,4 @@ Below are screenshots of the app in action:
 
 ### Data Entry
 <img src="https://github.com/Amina-emmy/demoSQLite/assets/123076551/813d9884-9866-4ddc-834a-a5f8512c3404" alt="Data Entry 1" width="300"/>
-<img src="https://github.com/Amina-emmy/demoSQLite/assets/123076551/5156f6dc-1c4b-4a30-bca9-ceb4b81ff443" alt="Data Entry 2" width="300"/>
+
